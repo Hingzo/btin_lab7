@@ -30,4 +30,11 @@ function giaiPhongBoNho($link, $result)
 	} catch (TypeError $e) {
 	}
 }
-
+function layDuLieu($result)
+{
+	$data = array();
+	while ($row = mysqli_fetch_assoc($result)) {
+		$data[] = $row;
+	}
+	return $data;
+}
