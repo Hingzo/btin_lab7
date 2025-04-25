@@ -13,6 +13,9 @@
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-a">Câu a</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-b">Câu b</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-c">Câu c</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-d">Câu d</button></li>
         <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-g">Câu g</button></li>
     </ul>
 
@@ -23,6 +26,30 @@
             <button class="btn btn-primary mb-3" id="loadTop10">Xem Top 10 bản tin nhiều lượt like</button>
             <div id="result-a"></div>
         </div>
+        <!-- Tab B -->
+        <div class="tab-pane fade" id="tab-b">
+        <button class="btn btn-info mb-3" id="loadCongNghe">Xem bản tin chứa từ 'công nghệ'</button>
+        <div id="result-b"></div>
+        </div>
+        <!-- Tab C -->
+        <div class="tab-pane fade" id="tab-c">
+            <button class="btn btn-success mb-3" id="loadDanhmuc">Liệt kê bản tin "Giáo dục" và "Đời sống"</button>
+            <div id="result-c"></div>
+        </div>
+
+        <!-- Tab D -->
+        <div class="tab-pane fade" id="tab-d">
+            <button class="btn btn-info mb-3" id="loadBinhluan">Xem bình luận bản tin thương mại điện tử</button>
+            <div id="result-d"></div>
+        </div>
+
+        <!-- Tab G -->
+        <div class="tab-pane fade" id="tab-g">
+            <button class="btn btn-warning mb-3" id="insertBantin">Thêm bản tin Công nghệ mới</button>
+            <div id="result-g"></div>
+        </div>
+    </div>
+</div>
 
 <script>
     // Câu a - Load top 10 bản tin nhiều lượt like
@@ -31,7 +58,34 @@
             $('#result-a').html(data);
         });
     });
+    
+    // Câu b - Load bài viết chứa "công nghệ"
+    $('#loadCongNghe').click(function () {
+        $.get('b.php', function (data) {
+            $('#result-b').html(data);
+        });
+    });
 
+    // Câu c - Liệt kê bản tin thuộc danh mục Giáo dục và Đời sống
+     /*$('#loadDanhmuc').click(function () {
+        $.get('c.php', function (data) {
+            $('#result-c').html(data);
+        });
+    });
+
+    // Câu d - Liệt kê bình luận bản tin thương mại điện tử
+    $('#loadBinhluan').click(function () {
+        $.get('d.php', function (data) {
+            $('#result-d').html(data);
+        });
+    });
+
+    // Câu g - Thêm bản tin mới về Công nghệ
+    $('#insertBantin').click(function () {
+        $.get('g.php', function (data) {
+            $('#result-g').html(data);
+        });
+    });*/
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
