@@ -1,11 +1,10 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "db_news");
-if ($conn->connect_error) {
-    die("Kết nối thất bại: " . $conn->connect_error);
-}
+require_once("db_module.php");
+$link = null;
+taoKetNoi($link);
 
 $sql = "SELECT tieude, so_luot_like FROM tbl_bantin ORDER BY so_luot_like DESC LIMIT 10";
-$result = $conn->query($sql);
+$result = mysqli_query($link, $sql);
 
 echo "<ul class='list-group'>";
 while ($row = $result->fetch_assoc()) {
@@ -16,4 +15,5 @@ while ($row = $result->fetch_assoc()) {
 }
 echo "</ul>";
 
-$conn->close();
+giaiPhongBoNho($link, true);
+?>
