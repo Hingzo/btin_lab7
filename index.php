@@ -16,6 +16,8 @@
         <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-b">Câu b</button></li>
         <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-c">Câu c</button></li>
         <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-d">Câu d</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-e">Câu e</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-f">Câu f</button></li>
         <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-g">Câu g</button></li>
     </ul>
 
@@ -23,7 +25,7 @@
     <div class="tab-content border p-3 bg-white">
         <!-- Tab A -->
         <div class="tab-pane fade show active" id="tab-a">
-            <button class="btn btn-primary mb-3" id="loadTop10">Xem Top 10 bản tin nhiều lượt like</button>
+            <button class="btn btn-info mb-3" id="loadTop10">Xem Top 10 bản tin nhiều lượt like</button>
             <div id="result-a"></div>
         </div>
         <!-- Tab B -->
@@ -33,7 +35,7 @@
         </div>
         <!-- Tab C -->
         <div class="tab-pane fade" id="tab-c">
-            <button class="btn btn-success mb-3" id="loadDanhmuc">Liệt kê bản tin "Giáo dục" và "Đời sống"</button>
+            <button class="btn btn-info mb-3" id="loadDanhmuc">Liệt kê bản tin "Giáo dục" và "Đời sống"</button>
             <div id="result-c"></div>
         </div>
 
@@ -42,10 +44,20 @@
             <button class="btn btn-info mb-3" id="loadBinhluan">Xem bình luận bản tin thương mại điện tử</button>
             <div id="result-d"></div>
         </div>
-
+       <!-- Câu e -->
+       <div class="tab-pane fade" id="tab-e">
+            <button class="btn btn-info mb-3" id="loadDocGiaBinhLuan">Xem độc giả bình luận về bài Apple</button>
+            <div id="result-e"></div>
+        </div>
+        
+        <!-- Câu f -->
+        <div class="tab-pane fade" id="tab-f">
+            <button class="btn btn-info mb-3" id="loadLuotLike">Xem số lượt like của các bài viết</button>
+            <div id="result-f"></div>
+        </div>
         <!-- Tab G -->
         <div class="tab-pane fade" id="tab-g">
-            <button class="btn btn-warning mb-3" id="insertBantin">Thêm bản tin Công nghệ mới</button>
+            <button class="btn btn-info mb-3" id="insertBantin">Thêm bản tin Công nghệ mới</button>
             <div id="result-g"></div>
         </div>
     </div>
@@ -65,7 +77,19 @@
             $('#result-b').html(data);
         });
     });
-
+    // Câu e - Load danh sách độc giả bình luận bản tin
+    $('#loadDocGiaBinhLuan').click(function () {
+        $.get('e.php', function (data) {
+            $('#result-e').html(data);
+        });
+    });
+    
+    // Câu f - Load số lượt like của từng bài viết
+    $('#loadLuotLike').click(function () {
+        $.get('f.php', function (data) {
+            $('#result-f').html(data);
+        });
+    });
     // Câu c - Liệt kê bản tin thuộc danh mục Giáo dục và Đời sống
      /*$('#loadDanhmuc').click(function () {
         $.get('c.php', function (data) {
