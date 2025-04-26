@@ -19,6 +19,8 @@
         <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-e">Câu e</button></li>
         <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-f">Câu f</button></li>
         <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-g">Câu g</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-h">Câu h</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-i">Câu i</button></li>
     </ul>
 
     <!-- Tab panes -->
@@ -60,6 +62,16 @@
             <button class="btn btn-info mb-3" id="insertBantin">Thêm bản tin Công nghệ mới</button>
             <div id="result-g"></div>
         </div>
+        <!-- Tab H -->
+        <div class="tab-pane fade" id="tab-h">
+            <button class="btn btn-info mb-3" id="themBinhLuan">Thêm bình luận về bản tin Samsung</button>
+            <div id="result-h"></div>
+        </div>
+        <!-- Tab I -->
+        <div class="tab-pane fade" id="tab-i">
+            <button class="btn btn-info mb-3" id="capNhatBanTin">Cập nhật nội dung bản tin ID 10</button>
+            <div id="result-i"></div>
+        </div>
     </div>
 </div>
 
@@ -77,6 +89,21 @@
             $('#result-b').html(data);
         });
     });
+    
+    // Câu c - Liệt kê bản tin thuộc danh mục Giáo dục và Đời sống
+    $('#loadDanhmuc').click(function () {
+        $.get('c.php', function (data) {
+            $('#result-c').html(data);
+        });
+    });
+
+    // Câu d - Liệt kê bình luận bản tin thương mại điện tử
+    $('#loadBinhluan').click(function () {
+        $.get('d.php', function (data) {
+            $('#result-d').html(data);
+        });
+    });
+    
     // Câu e - Load danh sách độc giả bình luận bản tin
     $('#loadDocGiaBinhLuan').click(function () {
         $.get('e.php', function (data) {
@@ -90,26 +117,27 @@
             $('#result-f').html(data);
         });
     });
-    // Câu c - Liệt kê bản tin thuộc danh mục Giáo dục và Đời sống
-     /*$('#loadDanhmuc').click(function () {
-        $.get('c.php', function (data) {
-            $('#result-c').html(data);
-        });
-    });
-
-    // Câu d - Liệt kê bình luận bản tin thương mại điện tử
-    $('#loadBinhluan').click(function () {
-        $.get('d.php', function (data) {
-            $('#result-d').html(data);
-        });
-    });
-
+    
     // Câu g - Thêm bản tin mới về Công nghệ
     $('#insertBantin').click(function () {
         $.get('g.php', function (data) {
             $('#result-g').html(data);
         });
-    });*/
+    });
+    
+    // Câu h - Thêm bình luận vào bản tin Samsung
+    $('#themBinhLuan').click(function () {
+        $.get('h.php', function (data) {
+            $('#result-h').html(data);
+        });
+    });
+    
+    // Câu i - Cập nhật nội dung bản tin ID 10
+    $('#capNhatBanTin').click(function () {
+        $.get('i.php', function (data) {
+            $('#result-i').html(data);
+        });
+    });
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
