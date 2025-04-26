@@ -1,6 +1,6 @@
 <?php
-require_once "db_module.php";
-require_once "config.php";
+require_once("db_module.php");
+$link = null;
 taoKetNoi($link);
 // Liệt kê tất cả bình luận của bản tin có tiêu đề "Thay đổi cách thức mua sắm trong thời kì thương mại điện tử"
 $sql = "
@@ -16,5 +16,5 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo "<p><strong>{$row['hoten']}</strong> bình luận: {$row['noidung']} lúc {$row['thoigian']}</p>";
 }
 
-giaiPhongBoNho($link, $result);
+giaiPhongBoNho($link, true);
 ?>

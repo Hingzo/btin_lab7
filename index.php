@@ -19,6 +19,8 @@
         <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-e">Câu e</button></li>
         <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-f">Câu f</button></li>
         <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-g">Câu g</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-h">Câu h</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-i">Câu i</button></li>
     </ul>
 
     <!-- Tab panes -->
@@ -44,13 +46,13 @@
             <button class="btn btn-info mb-3" id="loadBinhluan">Xem bình luận bản tin thương mại điện tử</button>
             <div id="result-d"></div>
         </div>
-       <!-- Câu e -->
+       <!-- Câu E -->
        <div class="tab-pane fade" id="tab-e">
             <button class="btn btn-info mb-3" id="loadDocGiaBinhLuan">Xem độc giả bình luận về bài Apple</button>
             <div id="result-e"></div>
         </div>
         
-        <!-- Câu f -->
+        <!-- Câu F -->
         <div class="tab-pane fade" id="tab-f">
             <button class="btn btn-info mb-3" id="loadLuotLike">Xem số lượt like của các bài viết</button>
             <div id="result-f"></div>
@@ -60,7 +62,16 @@
             <button class="btn btn-info mb-3" id="insertBantin">Thêm bản tin Công nghệ mới</button>
             <div id="result-g"></div>
         </div>
-    </div>
+            <!-- Tab H -->
+        <div class="tab-pane fade" id="tab-h">
+            <button class="btn btn-info mb-3" id="themBinhLuan">Thêm bình luận về bản tin Samsung</button>
+            <div id="result-h"></div>
+        </div>
+        <!-- Tab I -->
+        <div class="tab-pane fade" id="tab-i">
+            <button class="btn btn-info mb-3" id="capNhatBanTin">Cập nhật nội dung bản tin ID 10</button>
+            <div id="result-i"></div>
+        </div>
 </div>
 
 <script>
@@ -91,7 +102,7 @@
         });
     });
     // Câu c - Liệt kê bản tin thuộc danh mục Giáo dục và Đời sống
-     /*$('#loadDanhmuc').click(function () {
+     $('#loadDanhmuc').click(function () {
         $.get('c.php', function (data) {
             $('#result-c').html(data);
         });
@@ -109,7 +120,23 @@
         $.get('g.php', function (data) {
             $('#result-g').html(data);
         });
-    });*/
+    });
+
+    // Câu h - Thêm bình luận vào bản tin Samsung
+    $('#themBinhLuan').click(function () {
+        $.get('h.php', function (data) {
+            $('#result-h').html(data);
+        });
+    });
+    
+    // Câu i - Cập nhật nội dung bản tin ID 10
+    $('#capNhatBanTin').click(function () {
+        $.get('i.php', function (data) {
+            $('#result-i').html(data);
+        });
+    });
+</script>
+
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
