@@ -25,8 +25,7 @@ if (count($data) > 0) {
     
     if (count($user_data) > 0) {
         $id_docgia = $user_data[0]['id_docgia'];
-        
-        // Add the comment
+
         $current_time = date("Y-m-d H:i:s");
         $comment_content = "Bình luận mới cho bài viết về Samsung Galaxy S4";
         

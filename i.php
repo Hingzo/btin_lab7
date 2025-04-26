@@ -47,7 +47,6 @@ if (count($data) > 0) {
 } else {
     $response = "<div class='alert alert-warning'>Không tìm thấy bản tin với ID $article_id</div>";
     
-    // Optional: Display a list of available article IDs for debugging purposes
     $query_all = "SELECT id_bantin, tieude FROM tbl_bantin LIMIT 10";
     $result_all = chayTruyVanTraVeDL($link, $query_all);
     $all_data = layDuLieu($result_all);
