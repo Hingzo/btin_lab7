@@ -27,39 +27,42 @@
     <div class="tab-content border p-3 bg-white">
         <!-- Tab A -->
         <div class="tab-pane fade show active" id="tab-a">
-            <button class="btn btn-info mb-3" id="loadTop10">Xem Top 10 bản tin nhiều lượt like</button>
+            <button class="btn btn-info mb-3" id="loadTop10">Liệt kê các bản tin có số lượt like nhiều nhất (top 10)
+            </button>
             <div id="result-a"></div>
         </div>
         <!-- Tab B -->
         <div class="tab-pane fade" id="tab-b">
-        <button class="btn btn-info mb-3" id="loadCongNghe">Xem bản tin chứa từ 'công nghệ'</button>
+        <button class="btn btn-info mb-3" id="loadCongNghe">Liệt kê các bản tin có chữ từ khóa "công nghệ" trong tiêu đề bản tin</button>
         <div id="result-b"></div>
         </div>
         <!-- Tab C -->
         <div class="tab-pane fade" id="tab-c">
-            <button class="btn btn-info mb-3" id="loadDanhmuc">Liệt kê bản tin "Giáo dục" và "Đời sống"</button>
+            <button class="btn btn-info mb-3" id="loadDanhmuc">Liệt kê tất cả bản tin thuộc danh mục "Giáo dục" và danh mục "Đời sống"</button>
             <div id="result-c"></div>
         </div>
 
         <!-- Tab D -->
         <div class="tab-pane fade" id="tab-d">
-            <button class="btn btn-info mb-3" id="loadBinhluan">Xem bình luận bản tin thương mại điện tử</button>
+            <button class="btn btn-info mb-3" id="loadBinhluan">Liệt kê tất cả bình luận của bản tin có tiêu đề "Thay đổi cách thức mua sắm trong thời kì thương mại điện tử"
+            </button>
             <div id="result-d"></div>
         </div>
        <!-- Câu E -->
        <div class="tab-pane fade" id="tab-e">
-            <button class="btn btn-info mb-3" id="loadDocGiaBinhLuan">Xem độc giả bình luận về bài Apple</button>
+            <button class="btn btn-info mb-3" id="loadDocGiaBinhLuan">Liệt kê các độc giả đã bình luận bản tin “ Thoái trào tất yếu của Apple trước cạnh trạnh trên thị trường smartphone" và chứa từ khóa "ngốc nghếch"
+            </button>
             <div id="result-e"></div>
         </div>
         
         <!-- Câu F -->
         <div class="tab-pane fade" id="tab-f">
-            <button class="btn btn-info mb-3" id="loadLuotLike">Xem số lượt like của các bài viết</button>
+            <button class="btn btn-info mb-3" id="loadLuotLike">Đếm số lượt like của từng bài viết</button>
             <div id="result-f"></div>
         </div>
         <!-- Tab G -->
         <div class="tab-pane fade" id="tab-g">
-            <button class="btn btn-info mb-3" id="insertBantin">Thêm bản tin Công nghệ mới</button>
+            <button class="btn btn-info mb-3" id="insertBantin">Thêm mới một bản tin vào danh mục "Công nghệ"</button>
             <div id="result-g"></div>
         </div>
             <!-- Tab H -->
