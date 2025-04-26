@@ -57,11 +57,9 @@ if (count($data) > 0) {
         foreach ($all_data as $article) {
             $response .= "<li>ID: " . $article['id_bantin'] . " - " . $article['tieude'] . "</li>";
         }
-        $response .= "</ul></div>";
+        $response .=  "</ul></div>";
     }
 }
-
-// Free resources
 giaiPhongBoNho($link, $result_check);
 
 // Return response
