@@ -19,5 +19,5 @@ if (mysqli_num_rows($result) > 0) {
     echo "<p class='text-danger'>Không tìm thấy bản tin nào có từ 'công nghệ' trong tiêu đề.</p>";
 }
 
-giaiPhongBoNho($link, true);
+giaiPhongBoNho($link, $result);
 ?>
