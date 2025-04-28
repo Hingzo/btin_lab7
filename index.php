@@ -31,6 +31,12 @@
             </button>
             <div id="result-a"></div>
         </div>
+
+        <div class="tab-pane fade" id="tab-e">
+            <button class="btn btn-info mb-3" id="loadDocGiaBinhLuan">Xem độc giả bình luận về bài Apple</button>
+            <div id="result-e"></div>
+        </div>
+     
         <!-- Tab B -->
         <div class="tab-pane fade" id="tab-b">
         <button class="btn btn-info mb-3" id="loadCongNghe">Liệt kê các bản tin có chữ từ khóa "công nghệ" trong tiêu đề bản tin</button>
@@ -56,10 +62,14 @@
         </div>
         
         <!-- Câu F -->
+ main
         <div class="tab-pane fade" id="tab-f">
             <button class="btn btn-info mb-3" id="loadLuotLike">Đếm số lượt like của từng bài viết</button>
             <div id="result-f"></div>
         </div>
+       
+    </div>
+
         <!-- Tab G -->
         <div class="tab-pane fade" id="tab-g">
             <button class="btn btn-info mb-3" id="insertBantin">Thêm mới một bản tin vào danh mục "Công nghệ"</button>

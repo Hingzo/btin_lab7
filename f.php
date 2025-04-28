@@ -1,10 +1,18 @@
 <?php
 require_once "db_module.php";
 
-// Tạo kết nối
+
 $link = null;
 taoKetNoi($link);
 
+
+
+$query = "SELECT id_bantin, tieude, so_luot_like 
+          FROM tbl_bantin 
+          ORDER BY so_luot_like DESC";
+
+
+$result = chayTruyVanTraVeDL($link, $query);
 // Truy vấn lấy danh sách bài viết và số lượt like
 $sql = "SELECT id_bantin, tieude, so_luot_like 
           FROM tbl_bantin 
@@ -39,6 +47,5 @@ $data = layDuLieu($result);
 </div>
 
 <?php
-// Giải phóng bộ nhớ
 giaiPhongBoNho($link, $result);
 ?>
