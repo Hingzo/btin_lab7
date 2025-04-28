@@ -6,12 +6,20 @@ $link = null;
 taoKetNoi($link);
 
 
+
 $query = "SELECT id_bantin, tieude, so_luot_like 
           FROM tbl_bantin 
           ORDER BY so_luot_like DESC";
 
 
 $result = chayTruyVanTraVeDL($link, $query);
+// Truy vấn lấy danh sách bài viết và số lượt like
+$sql = "SELECT id_bantin, tieude, so_luot_like 
+          FROM tbl_bantin 
+          ORDER BY so_luot_like DESC";
+
+// Thực thi truy vấn
+$result = chayTruyVanTraVeDL($link, $sql);
 $data = layDuLieu($result);
 ?>
 
