@@ -30,7 +30,7 @@ if (count($data) > 0) {
         $current_time = date("Y-m-d H:i:s");
         $comment_content = "Đây là bình luận mới cho bài viết về Samsung Galaxy S4";
         
-        $query_add_comment = "INSERT INTO tbl_binhluan (id_docgia, id_bantin, noidung, thoigian, like) 
+        $query_add_comment = "INSERT INTO tbl_binhluan (id_docgia, id_bantin, noidung, thoigian, so_luot_like) 
                              VALUES ('$id_docgia', '$id_bantin', '$comment_content', '$current_time', 0)";
         
         $result_insert = chayTruyVanKhongTraVeDL($link, $query_add_comment);
