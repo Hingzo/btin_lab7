@@ -26,20 +26,18 @@
             <button class="btn btn-primary mb-3" id="loadTop10">Xem Top 10 bản tin nhiều like</button>
             <div id="result-a"></div>
         </div>
-        
-        <!-- Câu e -->
+
         <div class="tab-pane fade" id="tab-e">
             <button class="btn btn-info mb-3" id="loadDocGiaBinhLuan">Xem độc giả bình luận về bài Apple</button>
             <div id="result-e"></div>
         </div>
         
-        <!-- Câu f -->
+    
         <div class="tab-pane fade" id="tab-f">
             <button class="btn btn-success mb-3" id="loadLuotLike">Xem số lượt like của các bài viết</button>
             <div id="result-f"></div>
         </div>
-        
-        <!-- Các tab khác giữ nguyên -->
+       
     </div>
 </div>
 

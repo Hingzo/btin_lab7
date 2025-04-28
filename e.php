@@ -1,7 +1,7 @@
 <?php
 require_once "db_module.php";
 
-// Tạo kết nối
+
 $link = null;
 taoKetNoi($link);
 
@@ -14,7 +14,7 @@ $query = "SELECT DISTINCT dg.id_docgia, dg.hoten, dg.email, bl.noidung, bl.thoig
           AND bl.noidung LIKE '%ngốc nghếch%'
           ORDER BY dg.hoten";
 
-// Thực thi truy vấn
+
 $result = chayTruyVanTraVeDL($link, $query);
 $data = layDuLieu($result);
 ?>
@@ -28,21 +28,22 @@ $data = layDuLieu($result);
         <?php foreach ($data as $row): ?>
             <div class="list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1"><?= $row['hoten'] ?></h5>
+                    <h5 class="mb-1"><?= $row['hoten'] ?> </h5>
                     <small><?= $row['thoigian'] ?></small>
                 </div>
                 <p class="mb-1"><?= $row['noidung'] ?></p>
                 <small class="text-muted">Email: <?= $row['email'] ?> | ID: <?= $row['id_docgia'] ?></small>
             </div>
+
         <?php endforeach; ?>
+
     <?php else: ?>
         <div class="list-group-item">
-            <div class="alert alert-warning mb-0">Không tìm thấy độc giả nào thỏa mãn điều kiện.</div>
+            <div class="alert alert-warning mb-0">Không tìm thấy độc giả.</div>
         </div>
     <?php endif; ?>
 </div>
-
 <?php
-// Giải phóng bộ nhớ
+
 giaiPhongBoNho($link, $result);
 ?>
