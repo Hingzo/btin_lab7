@@ -62,7 +62,7 @@
         </div>
         
         <!-- Câu F -->
- main
+
         <div class="tab-pane fade" id="tab-f">
             <button class="btn btn-info mb-3" id="loadLuotLike">Đếm số lượt like của từng bài viết</button>
             <div id="result-f"></div>
